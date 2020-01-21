@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Snowman</title>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/semantic/semantic.min.css">
+	
+	<style type="text/css">
+		.main.container{
+			margin-top: 7em;
+		}
+.parent {
+display: grid;
+grid-template-columns: repeat(10, 10%);
+grid-template-rows: repeat(10, 70px);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+border-style: solid;
+border-width: 1px;
+}
+.parent>div{
+	border-style: solid;
+	border-width: 1px;
+	text-align:center;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+
+
+.div00 { grid-area: 1 / 1 / 2 / 2; }
+.div10 { grid-area: 1 / 2 / 2 / 3; }
+.div20 { grid-area: 1 / 3 / 2 / 4; }
+.div30 { grid-area: 1 / 4 / 2 / 5; }
+.div40 { grid-area: 1 / 5 / 2 / 6; }
+.div50 { grid-area: 1 / 6 / 2 / 7; }
+.div60 { grid-area: 1 / 7 / 2 / 8; }
+.div70 { grid-area: 1 / 8 / 2 / 9; }
+.div80 { grid-area: 1 / 9 / 2 / 10; }
+.div90 { grid-area: 1 / 10 / 2 / 11; }
+.div01 { grid-area: 2 / 1 / 3 / 2; }
+.div11 { grid-area: 2 / 2 / 3 / 3; }
+.div21 { grid-area: 2 / 3 / 3 / 4; }
+.div31 { grid-area: 2 / 4 / 3 / 5; }
+.div41 { grid-area: 2 / 5 / 3 / 6; }
+.div51 { grid-area: 2 / 6 / 3 / 7; }
+.div61 { grid-area: 2 / 7 / 3 / 8; }
+.div71 { grid-area: 2 / 8 / 3 / 9; }
+.div81 { grid-area: 2 / 9 / 3 / 10; }
+.div91 { grid-area: 2 / 10 / 3 / 11; }
+.div02 { grid-area: 3 / 1 / 4 / 2; }
+.div12 { grid-area: 3 / 2 / 4 / 3; }
+.div22 { grid-area: 3 / 3 / 4 / 4; }
+.div32 { grid-area: 3 / 4 / 4 / 5; }
+.div42 { grid-area: 3 / 5 / 4 / 6; }
+.div52 { grid-area: 3 / 6 / 4 / 7; }
+.div62 { grid-area: 3 / 7 / 4 / 8; }
+.div72 { grid-area: 3 / 8 / 4 / 9; }
+.div82 { grid-area: 3 / 9 / 4 / 10; }
+.div92 { grid-area: 3 / 10 / 4 / 11; }
+.div03 { grid-area: 4 / 1 / 5 / 2; }
+.div13 { grid-area: 4 / 2 / 5 / 3; }
+.div23 { grid-area: 4 / 3 / 5 / 4; }
+.div33 { grid-area: 4 / 4 / 5 / 5; }
+.div43 { grid-area: 4 / 5 / 5 / 6; }
+.div53 { grid-area: 4 / 6 / 5 / 7; }
+.div63 { grid-area: 4 / 7 / 5 / 8; }
+.div73 { grid-area: 4 / 8 / 5 / 9; }
+.div83 { grid-area: 4 / 9 / 5 / 10; }
+.div93 { grid-area: 4 / 10 / 5 / 11; }
+.div04 { grid-area: 5 / 1 / 6 / 2; }
+.div14 { grid-area: 5 / 2 / 6 / 3; }
+.div24 { grid-area: 5 / 3 / 6 / 4; }
+.div34 { grid-area: 5 / 4 / 6 / 5; }
+.div44 { grid-area: 5 / 5 / 6 / 6; }
+.div54 { grid-area: 5 / 6 / 6 / 7; }
+.div64 { grid-area: 5 / 7 / 6 / 8; }
+.div74 { grid-area: 5 / 8 / 6 / 9; }
+.div84 { grid-area: 5 / 9 / 6 / 10; }
+.div94 { grid-area: 5 / 10 / 6 / 11; }
+.div05 { grid-area: 6 / 1 / 7 / 2; }
+.div15 { grid-area: 6 / 2 / 7 / 3; }
+.div25 { grid-area: 6 / 3 / 7 / 4; }
+.div35 { grid-area: 6 / 4 / 7 / 5; }
+.div45 { grid-area: 6 / 5 / 7 / 6; }
+.div55 { grid-area: 6 / 6 / 7 / 7; }
+.div65 { grid-area: 6 / 7 / 7 / 8; }
+.div75 { grid-area: 6 / 8 / 7 / 9; }
+.div85 { grid-area: 6 / 9 / 7 / 10; }
+.div95 { grid-area: 6 / 10 / 7 / 11; }
+.div06 { grid-area: 7 / 1 / 8 / 2; }
+.div16 { grid-area: 7 / 2 / 8 / 3; }
+.div26 { grid-area: 7 / 3 / 8 / 4; }
+.div36 { grid-area: 7 / 4 / 8 / 5; }
+.div46 { grid-area: 7 / 5 / 8 / 6; }
+.div56 { grid-area: 7 / 6 / 8 / 7; }
+.div66 { grid-area: 7 / 7 / 8 / 8; }
+.div76 { grid-area: 7 / 8 / 8 / 9; }
+.div86 { grid-area: 7 / 9 / 8 / 10; }
+.div96 { grid-area: 7 / 10 / 8 / 11; }
+.div07 { grid-area: 8 / 1 / 9 / 2; }
+.div17 { grid-area: 8 / 2 / 9 / 3; }
+.div27 { grid-area: 8 / 3 / 9 / 4; }
+.div37 { grid-area: 8 / 4 / 9 / 5; }
+.div47 { grid-area: 8 / 5 / 9 / 6; }
+.div57 { grid-area: 8 / 6 / 9 / 7; }
+.div67 { grid-area: 8 / 7 / 9 / 8; }
+.div77 { grid-area: 8 / 8 / 9 / 9; }
+.div87 { grid-area: 8 / 9 / 9 / 10; }
+.div97 { grid-area: 8 / 10 / 9 / 11; }
+.div08 { grid-area: 9 / 1 / 10 / 2; }
+.div18 { grid-area: 9 / 2 / 10 / 3; }
+.div28 { grid-area: 9 / 3 / 10 / 4; }
+.div38 { grid-area: 9 / 4 / 10 / 5; }
+.div48 { grid-area: 9 / 5 / 10 / 6; }
+.div58 { grid-area: 9 / 6 / 10 / 7; }
+.div68 { grid-area: 9 / 7 / 10 / 8; }
+.div78 { grid-area: 9 / 8 / 10 / 9; }
+.div88 { grid-area: 9 / 9 / 10 / 10; }
+.div98 { grid-area: 9 / 10 / 10 / 11; }
+.div09 { grid-area: 10 / 1 / 11 / 2; }
+.div19 { grid-area: 10 / 2 / 11 / 3; }
+.div29 { grid-area: 10 / 3 / 11 / 4; }
+.div39 { grid-area: 10 / 4 / 11 / 5; }
+.div49 { grid-area: 10 / 5 / 11 / 6; }
+.div59 { grid-area: 10 / 6 / 11 / 7; }
+.div69 { grid-area: 10 / 7 / 11 / 8; }
+.div79 { grid-area: 10 / 8 / 11 / 9; }
+.div89 { grid-area: 10 / 9 / 11 / 10; }
+.div99 {grid-area: 10 / 10 / 11 / 11; }
+	</style>
+	<script type="text/javascript">
+		function victoire(){
+			$(function() {
+				$('.segment').dimmer('show');	
+			});
+		}
+
+	</script>
+</head>
+<body>
+<div class ="ui fixed inverted menu">
+	<a href="/" class="header item">Accueil</a>
+</div>
+
+<div class="ui main container" class="ui segment">
+	<div class="ui top attached tabular menu">
+		<div class="active item">Snowman</div>	
+	</div>
+	<div class="ui bottom attached active tab segment">	
+		<div class="parent">
+			<% 
+			test.forEach(function(d){ 
+
+				var k = d.value.length
+				if(k==2){ %>
+				<div class="div<%= d.key.substr(-2) %>"></div>
+			<% }
+			else{
+				if(d.value[0] == "http://api.stardog.com/CellBody" || d.value[1] == "http://api.stardog.com/CellBody" ||d.value[2] == "http://api.stardog.com/CellBody"  ){
+				%>
+				<div class="div<%= d.key.substr(-2) %>"><img src="/snoman/body.png"></div>
+				<%
+				}
+				if(d.value[0] == "http://api.stardog.com/CellPlayer" || d.value[1] == "http://api.stardog.com/CellPlayer" ||d.value[2] == "http://api.stardog.com/CellPlayer" ){
+				%>
+					<div class="div<%= d.key.substr(-2) %>"><img src="/snoman/player.png"></i></div>
+				<% }
+				if(d.value[0] == "http://api.stardog.com/CellLegs" || d.value[1] == "http://api.stardog.com/CellLegs" ||d.value[2] == "http://api.stardog.com/CellLegs" ){
+				%>
+					<div class="div<%= d.key.substr(-2) %>"><img src="/snoman/legs.png"></div>
+				<% }
+				if(d.value[0] == "http://api.stardog.com/CellHead" || d.value[1] == "http://api.stardog.com/CellHead" ||d.value[2] == "http://api.stardog.com/CellHead" ){
+				%>
+					<div class="div<%= d.key.substr(-2) %>"><img src="/snoman/head.png"></div>
+				<% }
+
+				if(d.value.includes("http://api.stardog.com/CellSnowman")){
+				%>
+					<div onafterprint="victoire()" class="div<%= d.key.substr(-2) %>"><img src="/snoman/snow.png"></div>
+				<%
+				}
+				else if(d.value.includes("http://api.stardog.com/CellMixHeadBody")){
+				%>
+					<div class="div<%= d.key.substr(-2) %>"><img src="/snoman/mixheadbody.png"></div>
+				<%
+				}
+				else if(d.value.includes("http://api.stardog.com/CellMixBodyLegs")){
+				%>
+					<div class="div<%= d.key.substr(-2) %>"><img src="/snoman/mixlegsbody.png"></div>
+				<%
+				}
+			}
+
+			%>
+
+			
+
+		<% }); %> 
+		</div> 
+	<div class="ui dimmer">
+		<div class="content">
+		<h2 class="ui inverted icon header">
+			<i class="heart icon"></i>
+			Victoire
+		</h2>	
+		</div>
+	</div>
+	</div>
+
+</div>
+<div class="ui icon buttons">
+	<a href="/up">
+  		<button class="ui button">
+   			 <i class="arrow up icon"></i>
+      	</button>
+    </a>
+    <a href="/down">
+ 		<button class="ui button">
+    		<i class="arrow down icon"></i>
+  		</button>
+  	</a>
+  	<a href="/left">
+  		<button class="ui button">
+    		<i class="arrow left icon"></i>
+  		</button>
+  	</a>
+  	<a href="/right">
+  		<button class="ui button">
+    		<i class="arrow right icon"></i>
+  		</button>
+  	</a>
+</div>
+</body>
+</html>
